@@ -20,7 +20,7 @@ namespace NoleggioVisual1
         string[] Usernames = new string[100];
         double latIniz = 45.6887943193688;
         double longtIniz = 9.67157363891602;
-
+        bool Disponibile = false;
         public Form1()
         {
             InitializeComponent();
@@ -48,6 +48,7 @@ namespace NoleggioVisual1
                     if (Usernames[i] == textbox_username.Text+","+textbox_password.Text)
                     {
                         textbox_password.Hide();
+                        panelfinale.Hide();
                         textbox_username.Hide();
                         button_login.Hide();
                         label1.Hide();
@@ -109,6 +110,7 @@ namespace NoleggioVisual1
             textBox_latitudine.Hide();
             textBox_longitudine.Hide();
             button_Noleggia.Hide();
+            panelfinale.Hide();
             button_Indietro.Hide();
             gMapControl1.MapProvider = GMapProviders.GoogleMap;
             double lat = Convert.ToDouble(textBox_latitudine.Text);
@@ -168,6 +170,7 @@ namespace NoleggioVisual1
         private void button_Noleggia_Click(object sender, EventArgs e)
         {
             panelnoleggio.Show();
+            panelfinale.Hide();
         }
         private void button_Click(object sender, EventArgs e)
         {
@@ -224,7 +227,7 @@ namespace NoleggioVisual1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //bottone torna alla pagina con la mappa
+            panelnoleggio.Hide();
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -255,6 +258,62 @@ namespace NoleggioVisual1
         private void label25_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (Disponibile)
+            {
+                label39.Hide();
+                label40.Hide();
+                label42.Hide();
+                label43.Hide();
+                label44.Hide();
+                label45.Hide();
+                button4.Hide();
+            }
+            else
+            {
+                label25.Hide();
+                label26.Hide();
+                label24.Hide();
+                button3.Hide();
+                button5.Hide();
+            }
+            panelfinale.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panelfinale.Hide();
+            panelnoleggio.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            panelfinale.Hide();
+            button_coord.Hide();
+            panelnoleggio.Hide();
+            panel1.Hide();
+            label6.Hide();
+            gMapControl1.Hide();
+            dataerror.Hide();
+            label_Mappa.Hide();
+            textBox_ID.Hide();
+            textBox_latitudine.Hide();
+            textBox_longitudine.Hide();
+            button_Noleggia.Hide();
+            panelfinale.Hide();
+            button_Indietro.Hide();
+
+            textbox_password.Show();
+            panelfinale.Show();
+            textbox_username.Show();
+            button_login.Show();
+            label1.Show();
+            label2.Show();
+            label3.Show();
+            label4.Show();
         }
     }
 }
