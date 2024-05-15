@@ -83,6 +83,18 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panelnoleggio = new System.Windows.Forms.Panel();
+            this.panelfinale = new System.Windows.Forms.Panel();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -108,18 +120,8 @@
             this.flowLayoutPanel12 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel11 = new System.Windows.Forms.FlowLayoutPanel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.panelfinale = new System.Windows.Forms.Panel();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label46 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
@@ -127,8 +129,8 @@
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.panelnoleggio.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.panelfinale.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -736,6 +738,155 @@
             this.panelnoleggio.TabIndex = 23;
             this.panelnoleggio.Paint += new System.Windows.Forms.PaintEventHandler(this.panelnoleggio_Paint);
             // 
+            // panelfinale
+            // 
+            this.panelfinale.Controls.Add(this.label46);
+            this.panelfinale.Controls.Add(this.label45);
+            this.panelfinale.Controls.Add(this.label44);
+            this.panelfinale.Controls.Add(this.label43);
+            this.panelfinale.Controls.Add(this.label42);
+            this.panelfinale.Controls.Add(this.label40);
+            this.panelfinale.Controls.Add(this.label39);
+            this.panelfinale.Controls.Add(this.button5);
+            this.panelfinale.Controls.Add(this.button4);
+            this.panelfinale.Controls.Add(this.label26);
+            this.panelfinale.Controls.Add(this.label25);
+            this.panelfinale.Controls.Add(this.label24);
+            this.panelfinale.Location = new System.Drawing.Point(1, 0);
+            this.panelfinale.Name = "panelfinale";
+            this.panelfinale.Size = new System.Drawing.Size(947, 533);
+            this.panelfinale.TabIndex = 28;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.BackColor = System.Drawing.Color.Transparent;
+            this.label45.Font = new System.Drawing.Font("High Tower Text", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.Color.Red;
+            this.label45.Location = new System.Drawing.Point(375, 320);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(169, 40);
+            this.label45.TabIndex = 32;
+            this.label45.Text = "-Motivo 4";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.BackColor = System.Drawing.Color.Transparent;
+            this.label44.Font = new System.Drawing.Font("High Tower Text", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.Red;
+            this.label44.Location = new System.Drawing.Point(376, 280);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(165, 40);
+            this.label44.TabIndex = 31;
+            this.label44.Text = "-Motivo 3";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.BackColor = System.Drawing.Color.Transparent;
+            this.label43.Font = new System.Drawing.Font("High Tower Text", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.Color.Red;
+            this.label43.Location = new System.Drawing.Point(375, 240);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(166, 40);
+            this.label43.TabIndex = 30;
+            this.label43.Text = "-Motivo 2";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.Color.Transparent;
+            this.label42.Font = new System.Drawing.Font("High Tower Text", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.Red;
+            this.label42.Location = new System.Drawing.Point(375, 203);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(163, 40);
+            this.label42.TabIndex = 29;
+            this.label42.Text = "-Motivo 1";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.Transparent;
+            this.label40.Font = new System.Drawing.Font("High Tower Text", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.Red;
+            this.label40.Location = new System.Drawing.Point(433, 166);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(120, 40);
+            this.label40.TabIndex = 28;
+            this.label40.Text = "Motivi";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.Transparent;
+            this.label39.Font = new System.Drawing.Font("High Tower Text", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.Red;
+            this.label39.Location = new System.Drawing.Point(343, 72);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(262, 40);
+            this.label39.TabIndex = 27;
+            this.label39.Text = "Noleggio Fallito";
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("High Tower Text", 16.2F, System.Drawing.FontStyle.Bold);
+            this.button5.Location = new System.Drawing.Point(416, 394);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(123, 63);
+            this.button5.TabIndex = 26;
+            this.button5.Text = "Termina Noleggio";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("High Tower Text", 16.2F, System.Drawing.FontStyle.Bold);
+            this.button4.Location = new System.Drawing.Point(416, 394);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(123, 63);
+            this.button4.TabIndex = 25;
+            this.button4.Text = "Indietro";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.Font = new System.Drawing.Font("High Tower Text", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Chartreuse;
+            this.label26.Location = new System.Drawing.Point(391, 280);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(133, 40);
+            this.label26.TabIndex = 2;
+            this.label26.Text = "Tempo:";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("High Tower Text", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Chartreuse;
+            this.label25.Location = new System.Drawing.Point(212, 32);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(497, 40);
+            this.label25.TabIndex = 1;
+            this.label25.Text = "Noleggio avvenuto con successo";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("High Tower Text", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Chartreuse;
+            this.label24.Location = new System.Drawing.Point(150, 119);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(634, 40);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Grazie per aver noleggiato dal nostro sito";
+            // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("High Tower Text", 16.2F, System.Drawing.FontStyle.Bold);
@@ -762,7 +913,7 @@
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 224F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 227F));
             this.tableLayoutPanel1.Controls.Add(this.label41, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.longitudinenoleggiodefinitivo, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.latitudinenoleggiodefinitivo, 1, 4);
@@ -796,7 +947,7 @@
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("High Tower Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.ForeColor = System.Drawing.Color.Black;
-            this.label41.Location = new System.Drawing.Point(179, 307);
+            this.label41.Location = new System.Drawing.Point(176, 307);
             this.label41.Margin = new System.Windows.Forms.Padding(15, 5, 20, 0);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(34, 22);
@@ -808,7 +959,7 @@
             this.longitudinenoleggiodefinitivo.AutoSize = true;
             this.longitudinenoleggiodefinitivo.Font = new System.Drawing.Font("High Tower Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.longitudinenoleggiodefinitivo.ForeColor = System.Drawing.Color.Black;
-            this.longitudinenoleggiodefinitivo.Location = new System.Drawing.Point(179, 250);
+            this.longitudinenoleggiodefinitivo.Location = new System.Drawing.Point(176, 250);
             this.longitudinenoleggiodefinitivo.Margin = new System.Windows.Forms.Padding(15, 5, 20, 0);
             this.longitudinenoleggiodefinitivo.Name = "longitudinenoleggiodefinitivo";
             this.longitudinenoleggiodefinitivo.Size = new System.Drawing.Size(182, 22);
@@ -820,7 +971,7 @@
             this.latitudinenoleggiodefinitivo.AutoSize = true;
             this.latitudinenoleggiodefinitivo.Font = new System.Drawing.Font("High Tower Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.latitudinenoleggiodefinitivo.ForeColor = System.Drawing.Color.Black;
-            this.latitudinenoleggiodefinitivo.Location = new System.Drawing.Point(179, 196);
+            this.latitudinenoleggiodefinitivo.Location = new System.Drawing.Point(176, 196);
             this.latitudinenoleggiodefinitivo.Margin = new System.Windows.Forms.Padding(15, 5, 20, 0);
             this.latitudinenoleggiodefinitivo.Name = "latitudinenoleggiodefinitivo";
             this.latitudinenoleggiodefinitivo.Size = new System.Drawing.Size(170, 22);
@@ -832,7 +983,7 @@
             this.aziendanoleggiodefinitivo.AutoSize = true;
             this.aziendanoleggiodefinitivo.Font = new System.Drawing.Font("High Tower Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aziendanoleggiodefinitivo.ForeColor = System.Drawing.Color.Black;
-            this.aziendanoleggiodefinitivo.Location = new System.Drawing.Point(179, 140);
+            this.aziendanoleggiodefinitivo.Location = new System.Drawing.Point(176, 140);
             this.aziendanoleggiodefinitivo.Margin = new System.Windows.Forms.Padding(15, 5, 20, 0);
             this.aziendanoleggiodefinitivo.Name = "aziendanoleggiodefinitivo";
             this.aziendanoleggiodefinitivo.Size = new System.Drawing.Size(147, 22);
@@ -844,7 +995,7 @@
             this.patentenoleggiodefinitivo.AutoSize = true;
             this.patentenoleggiodefinitivo.Font = new System.Drawing.Font("High Tower Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.patentenoleggiodefinitivo.ForeColor = System.Drawing.Color.Black;
-            this.patentenoleggiodefinitivo.Location = new System.Drawing.Point(179, 81);
+            this.patentenoleggiodefinitivo.Location = new System.Drawing.Point(176, 81);
             this.patentenoleggiodefinitivo.Margin = new System.Windows.Forms.Padding(15, 5, 20, 0);
             this.patentenoleggiodefinitivo.Name = "patentenoleggiodefinitivo";
             this.patentenoleggiodefinitivo.Size = new System.Drawing.Size(59, 22);
@@ -857,7 +1008,7 @@
             this.tiponoleggiodefinitivo.AutoSize = true;
             this.tiponoleggiodefinitivo.Font = new System.Drawing.Font("High Tower Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tiponoleggiodefinitivo.ForeColor = System.Drawing.Color.Black;
-            this.tiponoleggiodefinitivo.Location = new System.Drawing.Point(179, 46);
+            this.tiponoleggiodefinitivo.Location = new System.Drawing.Point(176, 46);
             this.tiponoleggiodefinitivo.Margin = new System.Windows.Forms.Padding(15, 5, 20, 0);
             this.tiponoleggiodefinitivo.Name = "tiponoleggiodefinitivo";
             this.tiponoleggiodefinitivo.Size = new System.Drawing.Size(132, 22);
@@ -869,7 +1020,7 @@
             this.IDveicolofinale.AutoSize = true;
             this.IDveicolofinale.Font = new System.Drawing.Font("High Tower Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IDveicolofinale.ForeColor = System.Drawing.Color.Black;
-            this.IDveicolofinale.Location = new System.Drawing.Point(179, 8);
+            this.IDveicolofinale.Location = new System.Drawing.Point(176, 8);
             this.IDveicolofinale.Margin = new System.Windows.Forms.Padding(15, 5, 20, 0);
             this.IDveicolofinale.Name = "IDveicolofinale";
             this.IDveicolofinale.Size = new System.Drawing.Size(34, 22);
@@ -895,7 +1046,7 @@
             this.label33.Location = new System.Drawing.Point(18, 196);
             this.label33.Margin = new System.Windows.Forms.Padding(15, 5, 20, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(123, 29);
+            this.label33.Size = new System.Drawing.Size(111, 46);
             this.label33.TabIndex = 29;
             this.label33.Text = "Latitudine";
             // 
@@ -1019,153 +1170,22 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // panelfinale
+            // timer1
             // 
-            this.panelfinale.Controls.Add(this.label45);
-            this.panelfinale.Controls.Add(this.label44);
-            this.panelfinale.Controls.Add(this.label43);
-            this.panelfinale.Controls.Add(this.label42);
-            this.panelfinale.Controls.Add(this.label40);
-            this.panelfinale.Controls.Add(this.label39);
-            this.panelfinale.Controls.Add(this.button5);
-            this.panelfinale.Controls.Add(this.button4);
-            this.panelfinale.Controls.Add(this.label26);
-            this.panelfinale.Controls.Add(this.label25);
-            this.panelfinale.Controls.Add(this.label24);
-            this.panelfinale.Location = new System.Drawing.Point(0, 0);
-            this.panelfinale.Name = "panelfinale";
-            this.panelfinale.Size = new System.Drawing.Size(947, 533);
-            this.panelfinale.TabIndex = 28;
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label24
+            // label46
             // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("High Tower Text", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.Chartreuse;
-            this.label24.Location = new System.Drawing.Point(150, 119);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(634, 40);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "Grazie per aver noleggiato dal nostro sito";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("High Tower Text", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.Chartreuse;
-            this.label25.Location = new System.Drawing.Point(212, 32);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(497, 40);
-            this.label25.TabIndex = 1;
-            this.label25.Text = "Noleggio avvenuto con successo";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Font = new System.Drawing.Font("High Tower Text", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.Chartreuse;
-            this.label26.Location = new System.Drawing.Point(371, 277);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(212, 40);
-            this.label26.TabIndex = 2;
-            this.label26.Text = "Torna presto";
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("High Tower Text", 16.2F, System.Drawing.FontStyle.Bold);
-            this.button4.Location = new System.Drawing.Point(416, 394);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(123, 63);
-            this.button4.TabIndex = 25;
-            this.button4.Text = "Indietro";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("High Tower Text", 16.2F, System.Drawing.FontStyle.Bold);
-            this.button5.Location = new System.Drawing.Point(416, 335);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(123, 63);
-            this.button5.TabIndex = 26;
-            this.button5.Text = "Log out";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.BackColor = System.Drawing.Color.Transparent;
-            this.label39.Font = new System.Drawing.Font("High Tower Text", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.Red;
-            this.label39.Location = new System.Drawing.Point(343, 72);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(262, 40);
-            this.label39.TabIndex = 27;
-            this.label39.Text = "Noleggio Fallito";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.Transparent;
-            this.label40.Font = new System.Drawing.Font("High Tower Text", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.Color.Red;
-            this.label40.Location = new System.Drawing.Point(413, 162);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(120, 40);
-            this.label40.TabIndex = 28;
-            this.label40.Text = "Motivi";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.BackColor = System.Drawing.Color.Transparent;
-            this.label42.Font = new System.Drawing.Font("High Tower Text", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.Red;
-            this.label42.Location = new System.Drawing.Point(343, 199);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(163, 40);
-            this.label42.TabIndex = 29;
-            this.label42.Text = "-Motivo 1";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.BackColor = System.Drawing.Color.Transparent;
-            this.label43.Font = new System.Drawing.Font("High Tower Text", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.ForeColor = System.Drawing.Color.Red;
-            this.label43.Location = new System.Drawing.Point(343, 236);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(166, 40);
-            this.label43.TabIndex = 30;
-            this.label43.Text = "-Motivo 2";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.BackColor = System.Drawing.Color.Transparent;
-            this.label44.Font = new System.Drawing.Font("High Tower Text", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.Color.Red;
-            this.label44.Location = new System.Drawing.Point(343, 276);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(165, 40);
-            this.label44.TabIndex = 31;
-            this.label44.Text = "-Motivo 3";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.BackColor = System.Drawing.Color.Transparent;
-            this.label45.Font = new System.Drawing.Font("High Tower Text", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.Color.Red;
-            this.label45.Location = new System.Drawing.Point(343, 316);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(169, 40);
-            this.label45.TabIndex = 32;
-            this.label45.Text = "-Motivo 4";
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Lucida Fax", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.Color.LawnGreen;
+            this.label46.Location = new System.Drawing.Point(512, 268);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(52, 55);
+            this.label46.TabIndex = 33;
+            this.label46.Text = "a";
             // 
             // Form1
             // 
@@ -1211,10 +1231,10 @@
             this.flowLayoutPanel4.PerformLayout();
             this.panelnoleggio.ResumeLayout(false);
             this.panelnoleggio.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.panelfinale.ResumeLayout(false);
             this.panelfinale.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1313,6 +1333,8 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label46;
     }
 }
 
