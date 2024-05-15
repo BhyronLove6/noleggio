@@ -284,6 +284,8 @@ namespace NoleggioVisual1
                 button5.Hide();
             }
             panelfinale.Show();
+            label46.Text = ore.ToString() + ":" + minuti.ToString() + ":" + secondi.ToString();
+            timer1.Enabled = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -294,6 +296,7 @@ namespace NoleggioVisual1
 
         private void button5_Click(object sender, EventArgs e)
         {
+            
             ore = 0;
             minuti = 0;
             secondi = 0;
@@ -320,6 +323,7 @@ namespace NoleggioVisual1
             label2.Show();
             label3.Show();
             label4.Show();
+            timer1.Enabled = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
