@@ -30,61 +30,40 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textbox_username = new System.Windows.Forms.TextBox();
-            this.textbox_password = new System.Windows.Forms.TextBox();
-            this.button_login = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label_username = new System.Windows.Forms.Label();
+            this.label_password = new System.Windows.Forms.Label();
+            this.label_titolo = new System.Windows.Forms.Label();
+            this.label_sottotitolo = new System.Windows.Forms.Label();
             this.dataerror = new System.Windows.Forms.Label();
-            this.checkBox_password = new System.Windows.Forms.CheckBox();
-            this.button_register = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
-            this.button_Noleggia = new System.Windows.Forms.Button();
-            this.textBox_ID = new System.Windows.Forms.TextBox();
-            this.textBox_longitudine = new System.Windows.Forms.TextBox();
+            this.label_registrati = new System.Windows.Forms.Label();
             this.label_Mappa = new System.Windows.Forms.Label();
-            this.textBox_latitudine = new System.Windows.Forms.TextBox();
-            this.button_Indietro = new System.Windows.Forms.Button();
-            this.timer_coord = new System.Windows.Forms.Timer(this.components);
-            this.button_coord = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label_veicoli = new System.Windows.Forms.Label();
+            this.label_tipologia = new System.Windows.Forms.Label();
+            this.longitudinenoleggiodefinitivo = new System.Windows.Forms.Label();
+            this.latitudinenoleggiodefinitivo = new System.Windows.Forms.Label();
+            this.aziendanoleggiodefinitivo = new System.Windows.Forms.Label();
+            this.patentenoleggiodefinitivo = new System.Windows.Forms.Label();
+            this.tiponoleggiodefinitivo = new System.Windows.Forms.Label();
+            this.IDveicolofinale = new System.Windows.Forms.Label();
+            this.label_id = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.label12 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.label19 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label9 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panelnoleggio = new System.Windows.Forms.Panel();
-            this.panelfinale = new System.Windows.Forms.Panel();
             this.label46 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
@@ -92,21 +71,10 @@
             this.label42 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label41 = new System.Windows.Forms.Label();
-            this.longitudinenoleggiodefinitivo = new System.Windows.Forms.Label();
-            this.latitudinenoleggiodefinitivo = new System.Windows.Forms.Label();
-            this.aziendanoleggiodefinitivo = new System.Windows.Forms.Label();
-            this.patentenoleggiodefinitivo = new System.Windows.Forms.Label();
-            this.tiponoleggiodefinitivo = new System.Windows.Forms.Label();
-            this.IDveicolofinale = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
@@ -114,8 +82,39 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
+            this.textbox_username = new System.Windows.Forms.TextBox();
+            this.textbox_password = new System.Windows.Forms.TextBox();
+            this.button_login = new System.Windows.Forms.Button();
+            this.checkBox_password = new System.Windows.Forms.CheckBox();
+            this.button_register = new System.Windows.Forms.Button();
+            this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
+            this.button_Noleggia = new System.Windows.Forms.Button();
+            this.textBox_ID = new System.Windows.Forms.TextBox();
+            this.textBox_longitudine = new System.Windows.Forms.TextBox();
+            this.textBox_latitudine = new System.Windows.Forms.TextBox();
+            this.button_Indietro = new System.Windows.Forms.Button();
+            this.timer_coord = new System.Windows.Forms.Timer(this.components);
+            this.button_coord = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelnoleggio = new System.Windows.Forms.Panel();
+            this.panelfinale = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.flowLayoutPanel15 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel14 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel13 = new System.Windows.Forms.FlowLayoutPanel();
@@ -138,24 +137,23 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("High Tower Text", 16.2F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(281, 113);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 26);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Username";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label_username.AutoSize = true;
+            this.label_username.Font = new System.Drawing.Font("High Tower Text", 16.2F, System.Drawing.FontStyle.Bold);
+            this.label_username.Location = new System.Drawing.Point(281, 113);
+            this.label_username.Name = "label_username";
+            this.label_username.Size = new System.Drawing.Size(115, 26);
+            this.label_username.TabIndex = 0;
+            this.label_username.Text = "Username";
             // 
-            // label2
+            // label_password
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("High Tower Text", 16.2F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(290, 198);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 26);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Password";
+            this.label_password.AutoSize = true;
+            this.label_password.Font = new System.Drawing.Font("High Tower Text", 16.2F, System.Drawing.FontStyle.Bold);
+            this.label_password.Location = new System.Drawing.Point(290, 198);
+            this.label_password.Name = "label_password";
+            this.label_password.Size = new System.Drawing.Size(105, 26);
+            this.label_password.TabIndex = 1;
+            this.label_password.Text = "Password";
             // 
             // textbox_username
             // 
@@ -164,7 +162,6 @@
             this.textbox_username.Name = "textbox_username";
             this.textbox_username.Size = new System.Drawing.Size(168, 26);
             this.textbox_username.TabIndex = 2;
-            this.textbox_username.TextChanged += new System.EventHandler(this.textbox_username_TextChanged);
             // 
             // textbox_password
             // 
@@ -174,7 +171,6 @@
             this.textbox_password.PasswordChar = '✱';
             this.textbox_password.Size = new System.Drawing.Size(168, 26);
             this.textbox_password.TabIndex = 3;
-            this.textbox_password.TextChanged += new System.EventHandler(this.textbox_password_TextChanged);
             // 
             // button_login
             // 
@@ -187,28 +183,28 @@
             this.button_login.UseVisualStyleBackColor = true;
             this.button_login.Click += new System.EventHandler(this.button_login_Click);
             // 
-            // label3
+            // label_titolo
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("High Tower Text", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(394, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 26);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Pagina di login";
+            this.label_titolo.AutoSize = true;
+            this.label_titolo.BackColor = System.Drawing.Color.Transparent;
+            this.label_titolo.Font = new System.Drawing.Font("High Tower Text", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_titolo.Location = new System.Drawing.Point(394, 68);
+            this.label_titolo.Name = "label_titolo";
+            this.label_titolo.Size = new System.Drawing.Size(162, 26);
+            this.label_titolo.TabIndex = 5;
+            this.label_titolo.Text = "Pagina di login";
             // 
-            // label4
+            // label_sottotitolo
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(337, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(298, 37);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "NOLEGGIO VEICOLI";
+            this.label_sottotitolo.AutoSize = true;
+            this.label_sottotitolo.BackColor = System.Drawing.Color.Transparent;
+            this.label_sottotitolo.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_sottotitolo.ForeColor = System.Drawing.Color.Red;
+            this.label_sottotitolo.Location = new System.Drawing.Point(337, 9);
+            this.label_sottotitolo.Name = "label_sottotitolo";
+            this.label_sottotitolo.Size = new System.Drawing.Size(298, 37);
+            this.label_sottotitolo.TabIndex = 6;
+            this.label_sottotitolo.Text = "NOLEGGIO VEICOLI";
             // 
             // dataerror
             // 
@@ -242,15 +238,15 @@
             this.button_register.Text = "Registrati";
             this.button_register.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // label_registrati
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("High Tower Text", 16.2F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(608, 397);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(330, 26);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Non hai un account? Registrati!";
+            this.label_registrati.AutoSize = true;
+            this.label_registrati.Font = new System.Drawing.Font("High Tower Text", 16.2F, System.Drawing.FontStyle.Bold);
+            this.label_registrati.Location = new System.Drawing.Point(608, 397);
+            this.label_registrati.Name = "label_registrati";
+            this.label_registrati.Size = new System.Drawing.Size(330, 26);
+            this.label_registrati.TabIndex = 10;
+            this.label_registrati.Text = "Non hai un account? Registrati!";
             // 
             // gMapControl1
             // 
@@ -359,7 +355,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(113, 64);
             this.flowLayoutPanel1.TabIndex = 20;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // flowLayoutPanel2
             // 
@@ -383,7 +378,6 @@
             this.label10.Size = new System.Drawing.Size(51, 16);
             this.label10.TabIndex = 4;
             this.label10.Text = " ID:123";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label15
             // 
@@ -395,7 +389,6 @@
             this.label15.Size = new System.Drawing.Size(106, 16);
             this.label15.TabIndex = 3;
             this.label15.Text = "Nome :mercedes";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label13
             // 
@@ -407,7 +400,6 @@
             this.label13.Size = new System.Drawing.Size(70, 16);
             this.label13.TabIndex = 1;
             this.label13.Text = "Patente : A";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label14
             // 
@@ -419,13 +411,12 @@
             this.label14.Size = new System.Drawing.Size(62, 16);
             this.label14.TabIndex = 2;
             this.label14.Text = "Tipo:auto";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // panel1
             // 
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label_veicoli);
             this.panel1.Controls.Add(this.flowLayoutPanel9);
             this.panel1.Controls.Add(this.flowLayoutPanel10);
             this.panel1.Controls.Add(this.flowLayoutPanel7);
@@ -441,15 +432,15 @@
             this.panel1.Size = new System.Drawing.Size(273, 385);
             this.panel1.TabIndex = 22;
             // 
-            // label6
+            // label_veicoli
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("High Tower Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(28, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(193, 25);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Veicoli disponibili";
+            this.label_veicoli.AutoSize = true;
+            this.label_veicoli.Font = new System.Drawing.Font("High Tower Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_veicoli.Location = new System.Drawing.Point(28, 0);
+            this.label_veicoli.Name = "label_veicoli";
+            this.label_veicoli.Size = new System.Drawing.Size(193, 25);
+            this.label_veicoli.TabIndex = 24;
+            this.label_veicoli.Text = "Veicoli disponibili";
             // 
             // flowLayoutPanel9
             // 
@@ -517,7 +508,6 @@
             this.label17.Size = new System.Drawing.Size(92, 16);
             this.label17.TabIndex = 11;
             this.label17.Text = "Nome : E-bike";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label18
             // 
@@ -600,7 +590,6 @@
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel3.Controls.Add(this.label9);
             this.flowLayoutPanel3.Controls.Add(this.label27);
             this.flowLayoutPanel3.Controls.Add(this.label29);
             this.flowLayoutPanel3.Controls.Add(this.label30);
@@ -609,17 +598,7 @@
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(136, 65);
             this.flowLayoutPanel3.TabIndex = 23;
-            this.flowLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel3_Paint);
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 16);
-            this.label9.TabIndex = 8;
+
             // 
             // label27
             // 
@@ -668,25 +647,25 @@
             // flowLayoutPanel4
             // 
             this.flowLayoutPanel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel4.Controls.Add(this.label7);
+            this.flowLayoutPanel4.Controls.Add(this.label_id);
             this.flowLayoutPanel4.Controls.Add(this.label11);
             this.flowLayoutPanel4.Controls.Add(this.label31);
-            this.flowLayoutPanel4.Controls.Add(this.label8);
+            this.flowLayoutPanel4.Controls.Add(this.label_tipologia);
             this.flowLayoutPanel4.Location = new System.Drawing.Point(132, 170);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Size = new System.Drawing.Size(136, 64);
             this.flowLayoutPanel4.TabIndex = 22;
             // 
-            // label7
+            // label_id
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 16);
-            this.label7.TabIndex = 12;
-            this.label7.Text = " ID:123";
+            this.label_id.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_id.AutoSize = true;
+            this.label_id.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_id.Location = new System.Drawing.Point(3, 0);
+            this.label_id.Name = "label_id";
+            this.label_id.Size = new System.Drawing.Size(51, 16);
+            this.label_id.TabIndex = 12;
+            this.label_id.Text = " ID:123";
             // 
             // label11
             // 
@@ -710,16 +689,16 @@
             this.label31.TabIndex = 9;
             this.label31.Text = "Patente : A";
             // 
-            // label8
+            // label_tipologia
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(3, 48);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 16);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Tipo:auto";
+            this.label_tipologia.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_tipologia.AutoSize = true;
+            this.label_tipologia.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_tipologia.Location = new System.Drawing.Point(3, 48);
+            this.label_tipologia.Name = "label_tipologia";
+            this.label_tipologia.Size = new System.Drawing.Size(62, 16);
+            this.label_tipologia.TabIndex = 10;
+            this.label_tipologia.Text = "Tipo:auto";
             // 
             // panelnoleggio
             // 
@@ -739,7 +718,6 @@
             this.panelnoleggio.Name = "panelnoleggio";
             this.panelnoleggio.Size = new System.Drawing.Size(947, 543);
             this.panelnoleggio.TabIndex = 23;
-            this.panelnoleggio.Paint += new System.Windows.Forms.PaintEventHandler(this.panelnoleggio_Paint);
             // 
             // panelfinale
             // 
@@ -796,7 +774,6 @@
             this.label44.Size = new System.Drawing.Size(663, 40);
             this.label44.TabIndex = 31;
             this.label44.Text = "-Errori nell\'elaborazione della prenotazione";
-            this.label44.Click += new System.EventHandler(this.label44_Click);
             // 
             // label43
             // 
@@ -821,7 +798,6 @@
             this.label42.Size = new System.Drawing.Size(434, 40);
             this.label42.TabIndex = 29;
             this.label42.Text = "-Veicolo attualmente in uso";
-            this.label42.Click += new System.EventHandler(this.label42_Click);
             // 
             // label40
             // 
@@ -1019,7 +995,6 @@
             this.patentenoleggiodefinitivo.Size = new System.Drawing.Size(59, 22);
             this.patentenoleggiodefinitivo.TabIndex = 35;
             this.patentenoleggiodefinitivo.Text = "None";
-            this.patentenoleggiodefinitivo.Click += new System.EventHandler(this.label25_Click);
             // 
             // tiponoleggiodefinitivo
             // 
@@ -1055,7 +1030,6 @@
             this.label34.Size = new System.Drawing.Size(99, 29);
             this.label34.TabIndex = 28;
             this.label34.Text = "Azienda";
-            this.label34.Click += new System.EventHandler(this.label34_Click);
             // 
             // label33
             // 
@@ -1078,7 +1052,6 @@
             this.label36.Size = new System.Drawing.Size(114, 49);
             this.label36.TabIndex = 28;
             this.label36.Text = "Longitudine";
-            this.label36.Click += new System.EventHandler(this.label36_Click);
             // 
             // label35
             // 
@@ -1205,7 +1178,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(125, 103);
             this.tableLayoutPanel2.TabIndex = 34;
-            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
             // tableLayoutPanel3
             // 
@@ -1236,17 +1208,17 @@
             this.Controls.Add(this.textBox_ID);
             this.Controls.Add(this.button_Noleggia);
             this.Controls.Add(this.gMapControl1);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label_registrati);
             this.Controls.Add(this.button_register);
             this.Controls.Add(this.checkBox_password);
             this.Controls.Add(this.dataerror);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label_sottotitolo);
+            this.Controls.Add(this.label_titolo);
             this.Controls.Add(this.button_login);
             this.Controls.Add(this.textbox_password);
             this.Controls.Add(this.textbox_username);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_password);
+            this.Controls.Add(this.label_username);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1275,22 +1247,68 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_username;
+        private System.Windows.Forms.Label label_password;
+        private System.Windows.Forms.Label label_titolo;
+        private System.Windows.Forms.Label label_sottotitolo;
+        private System.Windows.Forms.Label label_Mappa;
+        private System.Windows.Forms.Label label_registrati;
+        private System.Windows.Forms.Label label_id;
+        private System.Windows.Forms.Label label_veicoli;
+        private System.Windows.Forms.Label label_tipologia;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label dataerror;
+        private System.Windows.Forms.Label longitudinenoleggiodefinitivo;
+        private System.Windows.Forms.Label latitudinenoleggiodefinitivo;
+        private System.Windows.Forms.Label aziendanoleggiodefinitivo;
+        private System.Windows.Forms.Label patentenoleggiodefinitivo;
+        private System.Windows.Forms.Label tiponoleggiodefinitivo;
+        private System.Windows.Forms.Label IDveicolofinale;
         private System.Windows.Forms.TextBox textbox_username;
         private System.Windows.Forms.TextBox textbox_password;
         private System.Windows.Forms.Button button_login;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label dataerror;
         private System.Windows.Forms.CheckBox checkBox_password;
         private System.Windows.Forms.Button button_register;
-        private System.Windows.Forms.Label label5;
         private GMap.NET.WindowsForms.GMapControl gMapControl1;
         private System.Windows.Forms.Button button_Noleggia;
         private System.Windows.Forms.TextBox textBox_ID;
         private System.Windows.Forms.TextBox textBox_longitudine;
-        private System.Windows.Forms.Label label_Mappa;
         private System.Windows.Forms.TextBox textBox_latitudine;
         private System.Windows.Forms.Button button_Indietro;
         private System.Windows.Forms.Timer timer_coord;
@@ -1298,7 +1316,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel10;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
@@ -1307,31 +1324,9 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Panel panelnoleggio;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel15;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel14;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel13;
@@ -1340,34 +1335,10 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label longitudinenoleggiodefinitivo;
-        private System.Windows.Forms.Label latitudinenoleggiodefinitivo;
-        private System.Windows.Forms.Label aziendanoleggiodefinitivo;
-        private System.Windows.Forms.Label patentenoleggiodefinitivo;
-        private System.Windows.Forms.Label tiponoleggiodefinitivo;
-        private System.Windows.Forms.Label IDveicolofinale;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Panel panelfinale;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label label46;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     }

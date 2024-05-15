@@ -30,11 +30,6 @@ namespace NoleggioVisual1
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button_login_Click(object sender, EventArgs e)
         {
             if (textbox_password.Text.Length == 0 && textbox_username.Text.Length == 0)
@@ -54,12 +49,12 @@ namespace NoleggioVisual1
                         panelfinale.Hide();
                         textbox_username.Hide();
                         button_login.Hide();
-                        label1.Hide();
-                        label2.Hide();
-                        label3.Hide();
-                        label4.Hide();
+                        label_username.Hide();
+                        label_password.Hide();
+                        label_titolo.Hide();
+                        label_sottotitolo.Hide();
                         panel1.Show();
-                        label6.Show();
+                        label_veicoli.Show();
                         panelnoleggio.Hide();
                         checkBox_password.Visible = false;
                         gMapControl1.Show();
@@ -86,16 +81,6 @@ namespace NoleggioVisual1
             }
         }
 
-        private void textbox_username_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textbox_password_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             for (int j = 0; j < 100; j++)
@@ -105,7 +90,7 @@ namespace NoleggioVisual1
             button_coord.Hide();
             panelnoleggio.Hide();
             panel1.Hide();
-            label6.Hide();
+            label_veicoli.Hide();
             gMapControl1.Hide();
             dataerror.Hide();
             label_Mappa.Hide();
@@ -193,76 +178,10 @@ namespace NoleggioVisual1
             textBox_longitudine.Text = a.Lng.ToString();
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
-        private void flowLayoutPanel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             panelnoleggio.Hide();
         }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label24_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelnoleggio_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label36_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label34_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label25_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             if (Disponibile)
@@ -305,7 +224,7 @@ namespace NoleggioVisual1
             button_coord.Hide();
             panelnoleggio.Hide();
             panel1.Hide();
-            label6.Hide();
+            label_veicoli.Hide();
             gMapControl1.Hide();
             dataerror.Hide();
             label_Mappa.Hide();
@@ -320,10 +239,10 @@ namespace NoleggioVisual1
             panelfinale.Show();
             textbox_username.Show();
             button_login.Show();
-            label1.Show();
-            label2.Show();
-            label3.Show();
-            label4.Show();
+            label_username.Show();
+            label_password.Show();
+            label_titolo.Show();
+            label_sottotitolo.Show();
             timer1.Enabled = false;
         }
 
@@ -344,21 +263,6 @@ namespace NoleggioVisual1
                 }
                 label46.Text = ore.ToString() + ":" + minuti.ToString() + ":" + secondi.ToString();
             }
-        }
-
-        private void label44_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label42_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-            ima
         }
     }
 }
