@@ -20,7 +20,7 @@ namespace NoleggioVisual1
         string[] Usernames = new string[100];
         double latIniz = 45.6887943193688;
         double longtIniz = 9.67157363891602;
-        bool Disponibile = false;
+        bool Disponibile = true;
         int secondi = 0;
         int minuti = 0;
         int ore = 0;
@@ -193,6 +193,8 @@ namespace NoleggioVisual1
                 label44.Hide();
                 label45.Hide();
                 button4.Hide();
+                tableLayoutPanel2.Hide();
+                tableLayoutPanel3.Hide();
             }
             else
             {
@@ -202,6 +204,8 @@ namespace NoleggioVisual1
                 label46.Hide();
                 button3.Hide();
                 button5.Hide();
+                tableLayoutPanel4.Hide();
+                tableLayoutPanel5.Hide();
             }
             panelfinale.Show();
             label46.Text = ore.ToString() + ":" + minuti.ToString() + ":" + secondi.ToString();
@@ -263,6 +267,16 @@ namespace NoleggioVisual1
                 }
                 label46.Text = ore.ToString() + ":" + minuti.ToString() + ":" + secondi.ToString();
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
