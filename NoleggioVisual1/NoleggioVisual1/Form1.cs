@@ -17,7 +17,6 @@ namespace NoleggioVisual1
 {
     public partial class Form1 : Form
     {
-        //string[] Usernames = new string[100];
         double latIniz = 45.6887943193688;
         double longtIniz = 9.67157363891602;
         float PrezzoVeicoloNoleggiato;
@@ -25,13 +24,14 @@ namespace NoleggioVisual1
         int secondi = 0, minuti = 0, ore = 0;
         int numVeic = 0;
         Veicolo[] veicoli = new Veicolo[100];
-        User[] Utente = new User[100];
+        User[] Utenti = new User[100];
         Auto auto = new Auto();
         Bici bici = new Bici();
         BiciElettrica biciElettrica = new BiciElettrica();
         Motorino motorino = new Motorino();
         Monopattino monopattino = new Monopattino();
         public GMapOverlay[] markers = new GMapOverlay[100];
+        string Infotutto;
 
 
         #region CLASSI
@@ -441,70 +441,72 @@ namespace NoleggioVisual1
 
         public void creamarker(double lat, double lon, int type)
         {
+           
             //MessageBox.Show(lat.ToString()); //PROBLEMA QUA, TOGLIE IL PUNTO
             GMapOverlay mk = new GMapOverlay("markers");
             PointLatLng point = new PointLatLng(lat, lon);
+                
 
-            switch (type)
-            {
-                case 0:
-                    {
-                        Bitmap bmpMarker1 = (Bitmap)Image.FromFile("img/car.png");
-                        GMapMarker marker = new GMarkerGoogle(point, bmpMarker1);
-                        marker.ToolTipText = $"{numVeic}"; //gli do un numero in modo da ricordarmi quale veicolo è nel vettore
+                switch (type)
+                {
+                    case 0:
+                        {
+                            Bitmap bmpMarker1 = (Bitmap)Image.FromFile("img/car.png");
+                            GMapMarker marker = new GMarkerGoogle(point, bmpMarker1);
+                            marker.ToolTipText = $"{numVeic}";
 
-                        mk.Markers.Add(marker);
-                        gMapControl1.Overlays.Add(mk);
-                        markers[numVeic] = mk;
-                        numVeic++;
-                        break;
-                    }
-                case 1:
-                    {
-                        Bitmap bmpMarker1 = (Bitmap)Image.FromFile("img/monopattino1.png");
-                        GMapMarker marker = new GMarkerGoogle(point, bmpMarker1);
-                        marker.ToolTipText = $"{numVeic}";
-                        mk.Markers.Add(marker);
-                        gMapControl1.Overlays.Add(mk);
-                        markers[numVeic] = mk;
-                        numVeic++;
-                        break;
-                    }
-                case 2: 
-                    {
-                        Bitmap bmpMarker1 = (Bitmap)Image.FromFile("img/monopattino1.png");
-                        GMapMarker marker = new GMarkerGoogle(point, bmpMarker1);
-                        marker.ToolTipText = $"{numVeic}";
-                        mk.Markers.Add(marker);
-                        gMapControl1.Overlays.Add(mk);
-                        markers[numVeic] = mk;
-                        numVeic++;
-                        break;
-                    }
-                case 3: 
-                    {
-                        Bitmap bmpMarker1 = (Bitmap)Image.FromFile("img/bici.png");
-                        GMapMarker marker = new GMarkerGoogle(point, bmpMarker1);
-                        marker.ToolTipText = $"{numVeic}";
-                        mk.Markers.Add(marker);
-                        gMapControl1.Overlays.Add(mk);
-                        markers[numVeic] = mk;
-                        numVeic++;
-                        break;
-                    }
-                case 4: 
-                    {
-                        Bitmap bmpMarker1 = (Bitmap)Image.FromFile("img/monopattino1.png");
-                        GMapMarker marker = new GMarkerGoogle(point, bmpMarker1);
-                        marker.ToolTipText = $"{numVeic}";
-                        mk.Markers.Add(marker);
-                        gMapControl1.Overlays.Add(mk);
-                        markers[numVeic] = mk;
-                        numVeic++;
-                        break;
-                    }
-
-            }
+                            mk.Markers.Add(marker);
+                            gMapControl1.Overlays.Add(mk);
+                            markers[numVeic] = mk;
+                            numVeic++;
+                            break;
+                        }
+                    case 1:
+                        {
+                            Bitmap bmpMarker1 = (Bitmap)Image.FromFile("img/moto-removebg-preview (1).png");
+                            GMapMarker marker = new GMarkerGoogle(point, bmpMarker1);
+                            marker.ToolTipText = $"{numVeic}";
+                            mk.Markers.Add(marker);
+                            gMapControl1.Overlays.Add(mk);
+                            markers[numVeic] = mk;
+                            numVeic++;
+                            break;
+                        }
+                    case 2:
+                        {
+                            Bitmap bmpMarker1 = (Bitmap)Image.FromFile("img/monopattino1.png");
+                            GMapMarker marker = new GMarkerGoogle(point, bmpMarker1);
+                            marker.ToolTipText = $"{numVeic}";
+                            mk.Markers.Add(marker);
+                            gMapControl1.Overlays.Add(mk);
+                            markers[numVeic] = mk;
+                            numVeic++;
+                            break;
+                        }
+                    case 3:
+                        {
+                            Bitmap bmpMarker1 = (Bitmap)Image.FromFile("img/bici.png");
+                            GMapMarker marker = new GMarkerGoogle(point, bmpMarker1);
+                            marker.ToolTipText = $"{numVeic}";
+                            mk.Markers.Add(marker);
+                            gMapControl1.Overlays.Add(mk);
+                            markers[numVeic] = mk;
+                            numVeic++;
+                            break;
+                        }
+                    case 4:
+                        {
+                            Bitmap bmpMarker1 = (Bitmap)Image.FromFile("img/bici.png");
+                            GMapMarker marker = new GMarkerGoogle(point, bmpMarker1);
+                            marker.ToolTipText = $"{numVeic}";
+                            mk.Markers.Add(marker);
+                            gMapControl1.Overlays.Add(mk);
+                            markers[numVeic] = mk;
+                            numVeic++;
+                            break;
+                        }
+                }
+            
         }
         public Form1()
         {
@@ -522,7 +524,7 @@ namespace NoleggioVisual1
             {
                 for (int i = 0; i < 100; i++)
                 {
-                    if (Utente[i].GetUsername() == textbox_username.Text && Utente[i].GetPassword() == textbox_password.Text)
+                    if (Utenti[i].GetUsername() == textbox_username.Text && Utenti[i].GetPassword() == textbox_password.Text)
                     {
                         textbox_password.Hide();
                         panelfinale.Hide();
@@ -538,10 +540,8 @@ namespace NoleggioVisual1
                         checkBox_password.Visible = false;
                         gMapControl1.Show();
                         label_Mappa.Show();
-                        textBox_ID.Show();
                         textBox_latitudine.Show();
                         textBox_longitudine.Show();
-                        button_Noleggia.Show();
                         gMapControl1.DragButton = MouseButtons.Left;
                         //Mappa
                         gMapControl1.MapProvider = GMapProviders.GoogleMap;
@@ -552,8 +552,21 @@ namespace NoleggioVisual1
                         gMapControl1.Zoom = 14.5;
                         gMapControl1.MinZoom = 1;
                         gMapControl1.MaxZoom = 100;
-
-
+                        id1.Text = "ID: "+veicoli[0].GetIdentificativo();
+                        prezzo1.Text = "Prezzo: " + Convert.ToString(veicoli[0].GetPrezzo()) + " €";
+                        flowLayoutPanel1.BackgroundImage = Image.FromFile("img/carnoleggio1.png");
+                        id2.Text = "ID: "+veicoli[0].GetIdentificativo();
+                        prezzo2.Text = "Prezzo: " + Convert.ToString(veicoli[1].GetPrezzo()) + " €";
+                        flowLayoutPanel7.BackgroundImage = Image.FromFile("img/bici-removebg-preview1.png");
+                        id3.Text = "ID: "+veicoli[2].GetIdentificativo();
+                        prezzo3.Text = "Prezzo: " + Convert.ToString(veicoli[2].GetPrezzo()) + " €";
+                        flowLayoutPanel8.BackgroundImage = Image.FromFile("img/EBIKE-removebg-preview1.png");
+                        id4.Text = "ID: "+veicoli[3].GetIdentificativo();
+                        prezzo4.Text = "Prezzo: " + Convert.ToString(veicoli[3].GetPrezzo()) + " €";
+                        flowLayoutPanel9.BackgroundImage = Image.FromFile("img/motorino-removebg-preview1.png");
+                        id5.Text = "ID: "+veicoli[4].GetIdentificativo();
+                        prezzo5.Text = "Prezzo: " + Convert.ToString(veicoli[4].GetPrezzo())+ " €";
+                        flowLayoutPanel10.BackgroundImage = Image.FromFile("img/monopattinonoleggio1.png");
 
                     }
                 }
@@ -582,12 +595,12 @@ namespace NoleggioVisual1
                         double latitudine;
                         {
                             string latS = parts[1];
-                            double latitudine1 = Convert.ToDouble(latS.Split('.')[0]); //Separazione valori prima e dopo punti
+                            double latitudine1 = Convert.ToDouble(latS.Split('.')[0]);
                             double latitudine2 = Convert.ToDouble(latS.Split('.')[1]);
                             string decim = latS.Split('.')[1];
                             double a = decim.Length;
                             latitudine2 = latitudine2 / Math.Pow((double)10, a);
-                            latitudine = (double)latitudine1 + (double)latitudine2; //assemblo insieme i valori sistemati
+                            latitudine = (double)latitudine1 + (double)latitudine2;
                         }
                         #endregion
 
@@ -595,12 +608,12 @@ namespace NoleggioVisual1
                         double longitudine;
                         {
                             string lngS = parts[2];
-                            double longitudine1 = Convert.ToDouble(lngS.Split('.')[0]); //Separazione valori prima e dopo punti
+                            double longitudine1 = Convert.ToDouble(lngS.Split('.')[0]);
                             double longitudine2 = Convert.ToDouble(lngS.Split('.')[1]);
                             string decim = lngS.Split('.')[1];
                             double a = decim.Length;
                             longitudine2 = longitudine2 / Math.Pow((double)10, a);
-                            longitudine = (double)longitudine1 + (double)longitudine2; //assemblo insieme i valori sistemati
+                            longitudine = (double)longitudine1 + (double)longitudine2;
                         }
                         #endregion
 
@@ -608,7 +621,6 @@ namespace NoleggioVisual1
                         Console.WriteLine(longitudine);
                         float prezzo = float.Parse(parts[3].Trim());
                         string identificativo = parts[4].Trim();
-                        float Prezzo = float.Parse(parts[5].Trim());
                         bool Casco;
                         bool Cestino;
                         bool SedileBimbo;
@@ -622,39 +634,43 @@ namespace NoleggioVisual1
                         switch (tipoVeicolo)
                         {
                             case "AUTO":
-                                creamarker(latitudine, longitudine, 0);
+                                
                                 Nposti = int.Parse(parts[6].Trim());
                                 Potenza = int.Parse(parts[7].Trim());
                                 BagL = int.Parse(parts[8].Trim());
-                                veicoli[numVeicoli] = new Auto(identificativo, (float)latitudine, (float)longitudine, Prezzo, "img/car.png", Nposti, Potenza, BagL);
+                                veicoli[numVeicoli] = new Auto(identificativo, (float)latitudine, (float)longitudine, prezzo, "img/carnoleggio.png", Nposti, Potenza, BagL);
+                                creamarker(latitudine, longitudine, 0);
                                 break;
                             case "BICI":
-                                creamarker(latitudine, longitudine, 3);
+                                
                                 Casco = bool.Parse(parts[6].Trim());
                                 Cestino = bool.Parse(parts[7].Trim());
                                 SedileBimbo = bool.Parse(parts[8].Trim());
-                                veicoli[numVeicoli] = new Bici(identificativo, prezzo, "", Casco, Cestino, SedileBimbo);
+                                veicoli[numVeicoli] = new Bici(identificativo, prezzo, "img/bici-removebg-preview.png", Casco, Cestino, SedileBimbo);
+                                creamarker(latitudine, longitudine, 3);
                                 break;
                             case "BICI_ELETTRICA":
-                                creamarker(latitudine, longitudine, 4);
+                                
                                 Casco = bool.Parse(parts[6].Trim());
                                 Cestino = bool.Parse(parts[7].Trim());
                                 SedileBimbo = bool.Parse(parts[8].Trim());
                                 Batteria = int.Parse(parts[9].Trim());
-                                veicoli[numVeicoli] = new BiciElettrica(identificativo, (float)latitudine, (float)longitudine, prezzo, "", Casco, Cestino, SedileBimbo, 100);
+                                veicoli[numVeicoli] = new BiciElettrica(identificativo, (float)latitudine, (float)longitudine, prezzo, "img/EBIKE-removebg-preview.png", Casco, Cestino, SedileBimbo, 100);
+                                creamarker(latitudine, longitudine, 4);
                                 break;
                             case "MOTORINO":
+                                
+                                Azienda = parts[5].Trim();
+                                Cilindrata = int.Parse(parts[6].Trim());
+                                veicoli[numVeicoli] = new Motorino(identificativo, (float)latitudine, (float)longitudine, prezzo, "img/motorino-removebg-preview.png", Azienda, Cilindrata);
                                 creamarker(latitudine, longitudine, 1);
-                                Azienda = parts[6].Trim();
-                                Cilindrata = int.Parse(parts[7].Trim());
-                                veicoli[numVeicoli] = new Motorino(identificativo, (float)latitudine, (float)longitudine, prezzo, "", Azienda, Cilindrata);
                                 break;
                             case "MONOPATTINO":
                                 creamarker(latitudine, longitudine, 2);
                                 Azienda = parts[6].Trim();
                                 Batteria = int.Parse(parts[7].Trim());
                                 Casco = bool.Parse(parts[8].Trim());
-                                veicoli[numVeicoli] = new Monopattino(identificativo, (float)latitudine, (float)longitudine, Prezzo, "", Batteria, Casco, Azienda);
+                                veicoli[numVeicoli] = new Monopattino(identificativo, (float)latitudine, (float)longitudine, prezzo, "img/monopattinonoleggio.png", Batteria, Casco, Azienda);
                                 break;
                             default:
                                 Console.WriteLine($"Tipo di veicolo non supportato: {tipoVeicolo}");
@@ -672,18 +688,16 @@ namespace NoleggioVisual1
                     }
                     else
                     {
-                        // Se la riga non ha abbastanza parti, passa alla prossima riga
                         continue;
                     }
                 }
             }
 
-            ///------------------------- Inizo utente
             for (int j = 0; j < 100; j++)
             {
-                Utente[j] = new User();
-                Utente[j].SetUsername("");
-                Utente[j].SetPassword("");
+                Utenti[j] = new User();
+                Utenti[j].SetUsername("");
+                Utenti[j].SetPassword("");
             }
             panel1.Hide();
             panelnoleggio.Hide();
@@ -692,10 +706,8 @@ namespace NoleggioVisual1
             gMapControl1.Hide();
             dataerror.Hide();
             label_Mappa.Hide();
-            textBox_ID.Hide();
             textBox_latitudine.Hide();
             textBox_longitudine.Hide();
-            button_Noleggia.Hide();
             button_Indietro.Hide();
             gMapControl1.MapProvider = GMapProviders.GoogleMap;
             double lat = Convert.ToDouble(textBox_latitudine.Text);
@@ -708,13 +720,13 @@ namespace NoleggioVisual1
             string line = "";
             int i = 0;
             StreamReader sr = new StreamReader("account.txt");
-            while ((line = sr.ReadLine()) != null) // Modificato il controllo sull'assegnazione della variabile line
+            while ((line = sr.ReadLine()) != null) 
             {
                 string[] parts = line.Split(',');
-                if (parts.Length >= 2) // Assicurati che ci siano almeno due parti (username e password)
+                if (parts.Length >= 2) 
                 {
-                    Utente[i].SetUsername(parts[0].Trim()); // Assegna il primo elemento a Usernames
-                    Utente[i].SetPassword(parts[1].Trim()); // Assegna il secondo elemento a Passwords
+                    Utenti[i].SetUsername(parts[0].Trim()); 
+                    Utenti[i].SetPassword(parts[1].Trim()); 
                     i++;
                 }
             }
@@ -741,7 +753,7 @@ namespace NoleggioVisual1
         {
             //bottone torna al login
         }
-        string Infotutto;
+        
         private void gmap_OnMarkerClick(GMapMarker item, MouseEventArgs e)
         {
 
@@ -758,14 +770,39 @@ namespace NoleggioVisual1
             {
                 if (i == Convert.ToInt32(Infotutto))
                 {
-                    patentenoleggiodefinitivo.Text = "unknown";
+                    
                     aziendanoleggiodefinitivo.Text = "unknown";
                     IDveicolofinale.Text =  Convert.ToString(veicoli[i].GetIdentificativo());
-                    tiponoleggiodefinitivo.Text =  Convert.ToString(veicoli[i].GetType());
+                    if (Convert.ToString(veicoli[i].GetPrezzo()) == "25")
+                    {
+                        tiponoleggiodefinitivo.Text = "Auto";
+                        patentenoleggiodefinitivo.Text = "B";
+                    }else if(Convert.ToString(veicoli[i].GetPrezzo()) == "12")
+                    {
+                        tiponoleggiodefinitivo.Text = "Motorino";
+                        patentenoleggiodefinitivo.Text = "A";
+                    }
+                    else if (Convert.ToString(veicoli[i].GetPrezzo()) == "8")
+                    {
+                        tiponoleggiodefinitivo.Text = "E-Bike";
+                        patentenoleggiodefinitivo.Text = "None";
+                        latitudinenoleggiodefinitivo.Text=Convert.ToString(veicoli[i].GetLatitudine());
+                    }
+                    else if (Convert.ToString(veicoli[i].GetPrezzo()) == "15")
+                    {
+                        tiponoleggiodefinitivo.Text = "Bici";
+                        patentenoleggiodefinitivo.Text = "None";
+                    }
+                    else if (Convert.ToString(veicoli[i].GetPrezzo()) == "10")
+                    {
+                        tiponoleggiodefinitivo.Text = "Monopattino";
+                        patentenoleggiodefinitivo.Text = "None";
+                    }
                     latitudinenoleggiodefinitivo.Text = Convert.ToString(veicoli[i].GetLatitudine());
                     longitudinenoleggiodefinitivo.Text = Convert.ToString(veicoli[i].GetLongitudine());
                     prezzonoleggio.Text = Convert.ToString(veicoli[i].GetPrezzo());
                     PrezzoVeicoloNoleggiato = veicoli[i].GetPrezzo();
+                    flowLayoutPanel11.BackgroundImage=Image.FromFile(veicoli[i].GetImmagine());
 
                 }
             }
@@ -775,8 +812,6 @@ namespace NoleggioVisual1
         }
         private void button_Noleggia_Click(object sender, EventArgs e)
         {
-            panelnoleggio.Show();
-            panelfinale.Hide();
         }
         private void button_Click(object sender, EventArgs e)
         {
@@ -806,27 +841,8 @@ namespace NoleggioVisual1
             {
                 label26.Text = "Tempo: ";
                 label46.Show();
-                label39.Hide();
-                label40.Hide();
-                label42.Hide();
-                label43.Hide();
-                label44.Hide();
-                label45.Hide();
                 button4.Hide();
-                tableLayoutPanel2.Hide();
-                tableLayoutPanel3.Hide();
                 button6.Hide();
-            }
-            else
-            {
-                label25.Hide();
-                label26.Hide();
-                label24.Hide();
-                label46.Hide();
-                button3.Hide();
-                button5.Hide();
-                tableLayoutPanel4.Hide();
-                tableLayoutPanel5.Hide();
             }
             panelfinale.Show();
             label46.Text = ore.ToString() + ":" + minuti.ToString() + ":" + secondi.ToString();
@@ -862,7 +878,7 @@ namespace NoleggioVisual1
                 }
                 label46.Hide();
                 label26.Text = "Devi pagare: " + CostoFinale.ToString();
-                button5.Hide();
+                
 
             }
             
@@ -928,9 +944,12 @@ namespace NoleggioVisual1
 
                 for (int i = 0; i < numVeic; i++)
                 {
-                    if (markers[i].Markers[0].ToolTipText == Infotutto)
+                    if (markers[i].Markers[0].ToolTipText == Infotutto &&lats.Text!="" && longitudinenewpos.Text !="")
                     {
                         markers[i].Markers[0].Position = new PointLatLng(Convert.ToDouble(lats.Text), Convert.ToDouble(longitudinenewpos.Text));
+                    }
+                    else {
+                        markers[i].Markers[0].Position = markers[i].Markers[0].Position;
                     }
                 }
                 ore = 0;
@@ -945,10 +964,8 @@ namespace NoleggioVisual1
                 gMapControl1.Hide();
                 dataerror.Hide();
                 label_Mappa.Hide();
-                textBox_ID.Hide();
                 textBox_latitudine.Hide();
                 textBox_longitudine.Hide();
-                button_Noleggia.Hide();
                 panelfinale.Hide();
                 button_Indietro.Hide();
 
@@ -973,6 +990,17 @@ namespace NoleggioVisual1
         {
 
         }
+
+        private void textBox_ID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         private void gMapControl1_OnMarkerClick(GMapMarker item, MouseEventArgs e)
         {
             Console.WriteLine(String.Format("Marker {0} was clicked.", item.Tag));
@@ -983,34 +1011,3 @@ namespace NoleggioVisual1
         }
     }
 }
-
-
-
-/*ID X veicoli: 
- * primo numero=
- * Tipo di veicolo:
- * -auto=1
- * -moto=2
- * -bicinormale=3
- * -E-Bike=4
- * -monopattino=5
- * 
- * secondo numero:
- * Tipo patente:
- * -A=1
- * -B=2
- * -None=3
- * 
- * Daterzo in poi ID PERSONA
-*/
-
-//ID PERSONA =NUMERO DI POSIZIONE ARRAY DI PERSONE LOGGATE
-
-/*
- lA PATENTE DI DEFINISCE DAL VEICOLO:
-
--AUTO=B <------PER IL TIPO NOMI DI AUTO
--MOTO=A <------PER IL TIPO NOMI DI MOTO
--MONOPATTINO,BICINORMALE,E-BIKE =NONE <---- PER IL TIPO STESSA COSA
-
- */
